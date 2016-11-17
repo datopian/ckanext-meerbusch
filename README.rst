@@ -63,7 +63,7 @@ To install ckanext-meerbusch:
 
      pip install ckanext-meerbusch
 
-3. Add ``merbusch`` to the ``ckan.plugins`` setting in your CKAN
+3. Add ``meerbusch`` to the ``ckan.plugins`` setting in your CKAN
    config file (by default the config file is located at
    ``/etc/ckan/default/production.ini``).
 
