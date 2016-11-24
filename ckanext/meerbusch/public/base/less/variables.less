@@ -1,20 +1,23 @@
 // Colors
 @white: #ffffff;
 @brand-light: #00A0D0;
-@brand: rgb(0,105,145);
-@brand-darker: darken(@brand, 10%);
-@brand-dark: darken(@brand-darker, 10%);
+@brand: #0066cc;
+@brand-darker: #003366;
+@brand-dark: darken(@brand-darker, 5%);
+@brand-alt: #ff9933;
+@brand-alt-darker: darken(@brand-alt, 10%);
 
 // Base variables
 @imagePath: "../../../base/images";
 @spritePath: "@{imagePath}/sprite-ckan-icons.png";
 @bgPath: "";
 @FontAwesomePath: "../../../base/vendor/font-awesome/font";
+@sansFontFamily: Tahoma, Verdana, Helvetica, Arial, sans-serif;
 
 // Layout Variables
-@layoutLinkColor: @brand-light;
+@layoutLinkColor: @brand-alt-darker;
 @layoutFontFamily: @sansFontFamily;
-@layoutTextColor: #444;
+@layoutTextColor: #222;
 @layoutBoldColor: #000;
 @layoutBackgroundColor: rgb(220,220,220);
 @layoutTrimBackgroundColor: #fff;
@@ -48,9 +51,9 @@
 
 @mastheadTextColor: #fff;
 @mastheadLinkColor: @mastheadTextColor;
-@mastheadBackgroundColor: rgb(0,105,145);
-@mastheadBackgroundColorStart: #005d7a;
-@mastheadBackgroundColorEnd: #00536b;
+@mastheadBackgroundColor: @brand;
+@mastheadBackgroundColorStart: @brand;
+@mastheadBackgroundColorEnd: @brand;
 
 @navItemActiveTextColor: #FFF;
 @navItemActiveBackgroundColor: @brand-light;
@@ -62,7 +65,7 @@
 @bannerBackgroundColor: @mastheadBackgroundColor;
 
 
-@footerTextColor: #CCDEE3;
+@footerTextColor: lighten(@brand, 45%);
 @footerLinkColor: @footerTextColor;
 
 @inputColor: @black;
@@ -130,5 +133,5 @@
 @btnBorder: darken(@btnBackground, 10%);
 @btnBackground: @white;
 @btnBackgroundHighlight: darken(@white, 5%);
-@btnPrimaryBackground: @brand-light;
-@btnPrimaryBackgroundHighlight: @brand;
+@btnPrimaryBackground: @brand-alt;
+@btnPrimaryBackgroundHighlight: @brand-alt-darker;

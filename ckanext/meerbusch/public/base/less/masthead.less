@@ -4,7 +4,7 @@
   .clearfix();
   min-height: 30px;
   color: @mastheadTextColor;
-  background: darken(@mastheadBackgroundColor, 10%);
+  background: @brand-darker;
   .account {
     float: right;
     ul {
@@ -137,12 +137,16 @@
     margin-right: 20px;
 
     a{
-      color: @layoutTextColor;
+      color: @brand-darker;
     }
 
     .active{
       font-weight: 700;
-      color: @mastheadBackgroundColor;
+      color: @brand-alt-darker;
+      
+      a{
+        color: inherit;
+      }
     }
 
     li{
