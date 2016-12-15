@@ -1,0 +1,150 @@
+{
+  "scheming_version": 1,
+  "dataset_type": "dataset",
+  "about": "A reimplementation of the default CKAN dataset schema",
+  "about_url": "http://github.com/ckan/ckanext-scheming",
+  "dataset_fields": [
+    {
+      "field_name": "title",
+      "label": "Title",
+      "preset": "title",
+      "required": true,
+      "help_text": "Titel: Der Titel beschreibt den Datensatz, das Dokument oder die App prägnant und wird z. B. in Suchergebnissen und Listen angezeigt."
+    },
+    {
+      "field_name": "name",
+      "label": "URL",
+      "preset": "dataset_slug",
+      "form_placeholder": "my-dataset",
+      "required": true,
+      "help_text": "Name: Ein für Menschen lesbarer Bezeichner des Datensatzes, des Dokuments oder der Apps, der für eine Identifizierung genutzt werden kann (einfache ASCII-Präsentation des Titels, auch für die Pretty-Link-URL, Linked Data URIs). Um Dopplungen zu vermeiden, wird empfohlen, dem eigentlichen Namen Land, Bundesland und ggf. feinerer Gebietskörperschaft im ISO 3166-1 und -2 Code voranzustellen, z.B. de-mv-rostock-polizeidienststellen."
+    },
+    {
+      "field_name": "author",
+      "label": "Author",
+      "display_property": "dc:creator",
+      "required": true,
+      "help_text": "Veröffentlichende Stelle: Die Behörde, von der die Daten stammen. Bei Apps der App-Hersteller."
+    },
+    {
+      "field_name": "author_email",
+      "label": "Author Email",
+      "form_placeholder": "joe@example.com",
+      "display_property": "dc:creator",
+      "display_snippet": "email.html",
+      "display_email_name_field": "author",
+      "help_text": "Veröffentlichende Stelle Email: Email-Adresse oder Kontaktformular der Veröffentlichenden Stelle."
+    },
+    {
+      "field_name": "maintainer",
+      "label": "Maintainer",
+      "form_placeholder": "joe@example.com",
+      "help_text": "Datenverantwortliche Stelle: Dieser Ansprechpartner kann bei Fragen und Anmerkungen zu den Daten kontaktiert werden.",
+      "display_property": "dc:contributor"
+    },
+    {
+      "field_name": "maintainer_email",
+      "label": "Maintainer Email",
+      "form_placeholder": "joe@example.com",
+      "display_property": "dc:contributor",
+      "display_snippet": "email.html",
+      "display_email_name_field": "maintainer",
+      "help_text": "Datenverantwortliche Stelle Email: Email-Adresse oder Kontaktformular der Datenverantwortlichen Stelle"
+    },
+    {
+      "field_name": "notes",
+      "label": "Description",
+      "form_snippet": "markdown.html",
+      "required": true,
+      "help_text": "Beschreibung: Beschreibung und weitere Informationen zum Datensatz, zum Dokument oder zur App, wird auf der Detailseite dargestellt und kann mehrere Absätze umfassen."
+    },
+    {
+      "field_name": "tag_string",
+      "label": "Tags",
+      "preset": "tag_string_autocomplete",
+      "form_placeholder": "eg. economy, mental health, government"
+    },
+    {
+      "field_name": "url",
+      "label": "Source",
+      "form_placeholder": "http://example.com/dataset.json",
+      "display_property": "foaf:homepage",
+      "display_snippet": "link.html",
+      "help_text": "Website: Die ursprüngliche Webadresse des Datensatzes, Dokuments oder der App, um zu weiteren Informationen über den Datensatz, das Dokument oder die App zu gelangen. Wird auf der Detailseite als Link angezeigt."
+    },
+    {
+      "field_name": "license_id",
+      "label": "License",
+      "form_snippet": "license.html",
+      "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
+    },
+    {
+      "field_name": "owner_org",
+      "label": "Organization",
+      "preset": "dataset_organization"
+    },
+    {
+      "field_name": "version",
+      "label": "Version",
+      "validators": "ignore_missing unicode package_version_validator",
+      "form_placeholder": "1.0"
+    },
+    {
+      "field_name": "contacts",
+      "label": "Contacts",
+      "preset": "composite_repeating",
+      "form_blanks": 2,
+      "subfields": [
+        {
+            "field_name": "role",
+            "preset": "select",
+            "label": "Role",
+            "choices": [
+                {
+                  "value": "vertrieb",
+                  "label": "Vertrieb"
+                },
+                {
+                  "value": "autor",
+                  "label": "Autor"
+                }
+            ]
+        },
+        {
+            "field_name": "name",
+            "label": "Name"
+        }
+      ]
+    }
+  ],
+  "resource_fields": [
+    {
+      "field_name": "url",
+      "label": "URL",
+      "preset": "resource_url_upload",
+      "required": true
+    },
+    {
+      "field_name": "format",
+      "label": "Format",
+      "preset": "resource_format_autocomplete",
+      "required": true
+    },
+    {
+      "field_name": "description",
+      "label": "Description",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "Some useful notes about the data"
+    },
+    {
+      "field_name": "language",
+      "label": "Language",
+      "form_placeholder": "en, de, fr, es..."
+    },
+    {
+      "field_name": "hash",
+      "label": "Hash",
+      "help_text": "Bei statischen Dateien die SHA2-Prüfsumme bzw. bei dynamischen Daten ein Zertifikat zur Überprüfung der Integrität."
+    }
+  ]
+}
