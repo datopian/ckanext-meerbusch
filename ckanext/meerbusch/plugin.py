@@ -38,36 +38,10 @@ class MeerbuschPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     
     def create_package_schema(self):
         schema = super(MeerbuschPlugin, self).create_package_schema()
-        defaults = [toolkit.get_validator('ignore_missing'),
-                    toolkit.get_converter('convert_to_extras')]
-        
-        schema.update({
-            'number_of_participants':defaults,
-            'human_research':defaults,
-            'number_of_records': defaults,
-            'spatial_coverage': defaults,
-            'language': defaults,
-            'tc_start': defaults,
-            'tc_end': defaults,
-            'logo': defaults
-        })
         return schema
 
     def update_package_schema(self):
         schema = super(MeerbuschPlugin, self).update_package_schema()
-        defaults = [toolkit.get_validator('ignore_missing'),
-                    toolkit.get_converter('convert_to_extras')]
-        
-        schema.update({
-            'number_of_participants':defaults,
-            'human_research':defaults,
-            'number_of_records': defaults,
-            'spatial_coverage': defaults,
-            'language': defaults,
-            'tc_start': defaults,
-            'tc_end': defaults,
-            'logo': defaults
-        })
         return schema
 
     def show_package_schema(self):
@@ -75,18 +49,6 @@ class MeerbuschPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         schema = super(MeerbuschPlugin, self).show_package_schema()
         defaults = [toolkit.get_converter('convert_from_extras'),
                     toolkit.get_validator('ignore_missing')]
-        
-        schema.update({
-            'number_of_participants':defaults,
-            'human_research':defaults,
-            'number_of_records': defaults,
-            'spatial_coverage': defaults,
-            'language': defaults,
-            'tc_start': defaults,
-            'tc_end': defaults,
-            'logo': defaults
-        })
-        
         return schema
 
     def is_fallback(self):

@@ -90,29 +90,38 @@
       "form_placeholder": "1.0"
     },
     {
-      "field_name": "contacts",
-      "label": "Contacts",
+      "field_name": "dates",
+      "label": "Dates",
       "preset": "composite_repeating",
-      "form_blanks": 2,
+      "help_text": "Kalender-Daten: Erstellungs-, Veröffentlichungs- und Aktualisierungsdaten von Daten, Dokumenten, Apps und ihren Metadaten. Wird in der Oberfläche so angezeigt, dass Datennutzer einen Eindruck davon bekommen, wie aktuell die Daten sind.",
+      "form_blanks": 3,
+      "required": true,
       "subfields": [
         {
             "field_name": "role",
             "preset": "select",
             "label": "Role",
+            "required": true,
             "choices": [
                 {
-                  "value": "vertrieb",
-                  "label": "Vertrieb"
+                  "value": "erstellt",
+                  "label": "Erstellt"
                 },
                 {
-                  "value": "autor",
-                  "label": "Autor"
+                  "value": "veroeffentlicht",
+                  "label": "Veroeffentlicht"
+                },
+                {
+                  "value": "aktualisiert",
+                  "label": "Aktualisiert"
                 }
             ]
         },
         {
-            "field_name": "name",
-            "label": "Name"
+            "field_name": "date",
+            "label": "Date",
+            "preset": "datetime"
+            "required": true,
         }
       ]
     }
@@ -140,11 +149,6 @@
       "field_name": "language",
       "label": "Language",
       "form_placeholder": "en, de, fr, es..."
-    },
-    {
-      "field_name": "hash",
-      "label": "Hash",
-      "help_text": "Bei statischen Dateien die SHA2-Prüfsumme bzw. bei dynamischen Daten ein Zertifikat zur Überprüfung der Integrität."
     }
   ]
 }
