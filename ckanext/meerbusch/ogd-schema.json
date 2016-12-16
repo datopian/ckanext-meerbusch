@@ -96,6 +96,7 @@
       "help_text": "Kalender-Daten: Erstellungs-, Veröffentlichungs- und Aktualisierungsdaten von Daten, Dokumenten, Apps und ihren Metadaten. Wird in der Oberfläche so angezeigt, dass Datennutzer einen Eindruck davon bekommen, wie aktuell die Daten sind.",
       "form_blanks": 3,
       "required": true,
+      "include_empty": true,
       "subfields": [
         {
             "field_name": "role",
@@ -120,8 +121,8 @@
         {
             "field_name": "date",
             "label": "Date",
-            "preset": "datetime"
-            "required": true,
+            "preset": "date",
+            "required": true
         }
       ]
     }
