@@ -26,8 +26,7 @@ class MeerbuschPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     def before_map(self, map):
         map.connect('blog', '/blog',
-                    controller='ckanext.pages.controller:PagesController',
-                    action='blog')
+                    controller='ckanext.pages.controller:PagesController')
         return map
 
     def after_map(self, map):
