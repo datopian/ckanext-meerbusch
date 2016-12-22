@@ -102,15 +102,11 @@
         <ul class="nav nav-pills">
           {% block header_site_navigation_tabs %}
           {{ h.build_nav_main(
-                ('search', _('Datasets'))
+                ('search', _('Datasets')),
+                ('about', _('About'))                
               ) }}
           {% endblock %}
-          <li><a href="http://meerbusch-production.ckan.io/blog">Blog</a></li> 
-          {% block header_site_navigation_tabs %}
-          {{ h.build_nav_main(
-                ('about', _('About'))
-              ) }}
-          {% endblock %}          
+          <li><a href="http://meerbusch-production.ckan.io/blog">Blog</a></li>       
         </ul>
       </nav>
 
