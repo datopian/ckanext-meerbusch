@@ -44,3 +44,5 @@ docs/_build/
 idea/
 /ckanext/meerbusch/nbproject/
 nbproject/
+
+.mo

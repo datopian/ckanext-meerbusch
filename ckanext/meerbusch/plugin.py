@@ -1,14 +1,17 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckanext.meerbusch.helpers as _helpers
+from ckan.lib.plugins import DefaultTranslation
 
 
-class MeerbuschPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
+class MeerbuschPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm,
+                      DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IDatasetForm, inherit=True)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IRoutes)
+    plugins.implements(plugins.ITranslation)
     
     # IPackageController
     
