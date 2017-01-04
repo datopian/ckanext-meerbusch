@@ -3,26 +3,32 @@
 {% block package_additional_info %}
 	{{super()}}
 
-  <tr>
-    <th scope="row" class="dataset-label">{{ _("Identifier") }}</th>
-    <td class="dataset-details">
-        {{pkg_dict.id}}
-    </td>
-  </tr>
+  {% if pkg_dict.id %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Identifier") }}</th>
+      <td class="dataset-details">
+          {{pkg_dict.id}}
+      </td>
+    </tr>
+  {% endif %}
 
-  <tr>
-    <th scope="row" class="dataset-label">{{ _("Number of Participants") }}</th>
-    <td class="dataset-details">
-        {{pkg_dict.number_of_participants}}
-    </td>
-  </tr>
+  {% if pkg_dict.number_of_participants %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Number of Participants") }}</th>
+      <td class="dataset-details">
+          {{pkg_dict.number_of_participants}}
+      </td>
+    </tr>
+  {% endif %}
 
-   <tr>
-    <th scope="row" class="dataset-label">{{ _("Number of Records") }}</th>
-    <td class="dataset-details">
-        {{pkg_dict.number_of_records}}
-    </td>
-  </tr>
+  {% if pkg_dict.number_of_records %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Number of Records") }}</th>
+      <td class="dataset-details">
+          {{pkg_dict.number_of_records}}
+      </td>
+    </tr>
+  {% endif %}
 
    <tr>
     <th scope="row" class="dataset-label">{{ _("Human Research") }}</th>
@@ -36,36 +42,44 @@
     </td>
   </tr>
 
-  <tr>
-    <th scope="row" class="dataset-label">{{ _("Spatial Coverage") }}</th>
-    <td class="dataset-details">
-        {{pkg_dict.spatial_coverage}}
-    </td>
-  </tr>
+  {% if pkg_dict.spatial_coverage %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Spatial Coverage") }}</th>
+      <td class="dataset-details">
+          {{pkg_dict.spatial_coverage}}
+      </td>
+    </tr>
+  {% endif %}
 
-  <tr>
-    <th scope="row" class="dataset-label">{{ _("Temporal Coverage") }}</th>
-    <td class="dataset-details">
-        {{pkg_dict.tc_start}} - {{pkg_dict.tc_end}}
-    </td>
-  </tr>
+  {% if pkg_dict.tc_start and pkg_dict.tc_end %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Temporal Coverage") }}</th>
+      <td class="dataset-details">
+          {{pkg_dict.tc_start}} - {{pkg_dict.tc_end}}
+      </td>
+    </tr>
+  {% endif %}
 
-  <tr>
-    <th scope="row" class="dataset-label">{{ _("Language") }}</th>
-    <td class="dataset-details">
-    {% set language = h.get_language_by_code(pkg_dict.language) %}
-    {% if language %}
+  {% set language = h.get_language_by_code(pkg_dict.language) %}
+
+  {% if language %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Language") }}</th>
+      <td class="dataset-details">
         {{language.language}} ({{language.code}})
-    {% endif %}
+      </td>
+    </tr>
+  {% endif %}
 
-    </td>
-  </tr>
+  {% set version = h.get_package_version(pkg_dict.id) %}
 
-  <tr>
-    <th scope="row" class="dataset-label">{{ _("Version") }}</th>
-    <td class="dataset-details">
-        {{h.get_package_version(pkg_dict.id)}}
-    </td>
-  </tr>
+  {% if version %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Version") }}</th>
+      <td class="dataset-details">
+        {{version}}
+      </td>
+    </tr>
+  {% endif %}
 
 {% endblock %}
