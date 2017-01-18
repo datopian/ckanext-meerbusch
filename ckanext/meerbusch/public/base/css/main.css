@@ -9264,4 +9264,9 @@ iframe {
 .flash-messages .alert {
   box-shadow: none;
 }
+
+.control-label {
+  word-wrap: break-word;
+}
+
 /*# sourceMappingURL=main.css.map */
