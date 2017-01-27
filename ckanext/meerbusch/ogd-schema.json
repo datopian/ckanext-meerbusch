@@ -135,6 +135,11 @@
       "required": true
     },
     {
+      "field_name": "name",
+      "label": "Name",
+      "required": true
+    },
+    {
       "field_name": "format",
       "label": "Format",
       "preset": "resource_format_autocomplete",
