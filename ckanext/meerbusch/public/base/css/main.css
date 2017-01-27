@@ -7574,8 +7574,7 @@ h4 small {
   height: 35px;
   background-position: -256px -62px;
 }
-.format-label[data-format=json],
-.format-label[data-format*=json] {
+.format-label[data-format=json] {
   width: 32px;
   height: 35px;
   background-position: -288px -62px;
@@ -9264,4 +9263,11 @@ iframe {
 .flash-messages .alert {
   box-shadow: none;
 }
+
+.control-label {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
 /*# sourceMappingURL=main.css.map */
