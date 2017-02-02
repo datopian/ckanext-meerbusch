@@ -9270,4 +9270,8 @@ iframe {
   overflow-wrap: break-word;
 }
 
+.slug-preview ~ .info-block {
+  margin-top: 55px;
+}
+
 /*# sourceMappingURL=main.css.map */
