@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-meerbusch 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-01-03 12:38+0100\n"
+"POT-Creation-Date: 2017-02-10 11:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 0.9.6\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ckanext/meerbusch/public/base/javascript/modules/activity-stream.js:20
 #: ckanext/meerbusch/public/base/javascript/modules/activity-stream.min.js:1
@@ -221,6 +221,10 @@ msgid "Stadt Meerbusch"
 msgstr ""
 
 #: ckanext/meerbusch/templates/footer.html:24
+msgid "https://www.viderum.com/"
+msgstr ""
+
+#: ckanext/meerbusch/templates/footer.html:24
 msgid "Created by Viderum"
 msgstr ""
 
@@ -289,47 +293,47 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:7
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:8
 msgid "Identifier"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:14
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:17
 msgid "Number of Participants"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:21
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:26
 msgid "Number of Records"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:28
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:34
 #: ckanext/meerbusch/templates/package/snippets/package_metadata_fields.html:147
 msgid "Human Research"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:32
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:38
 msgid "Yes"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:34
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:40
 msgid "No"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:40
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:47
 #: ckanext/meerbusch/templates/package/snippets/package_metadata_fields.html:170
 msgid "Spatial Coverage"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:47
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:56
 #: ckanext/meerbusch/templates/package/snippets/package_metadata_fields.html:200
 msgid "Temporal Coverage"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:54
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:67
 #: ckanext/meerbusch/templates/package/snippets/package_metadata_fields.html:186
 msgid "Language"
 msgstr ""
 
-#: ckanext/meerbusch/templates/package/snippets/additional_info.html:65
+#: ckanext/meerbusch/templates/package/snippets/additional_info.html:78
 msgid "Version"
 msgstr ""
 
@@ -403,6 +407,7 @@ msgid "Visibility"
 msgstr ""
 
 #: ckanext/meerbusch/templates/package/snippets/package_basic_fields.html:148
+#: ckanext/meerbusch/templates/snippets/package_item.html:33
 msgid "Private"
 msgstr ""
 
@@ -419,6 +424,7 @@ msgid "Active"
 msgstr ""
 
 #: ckanext/meerbusch/templates/package/snippets/package_basic_fields.html:168
+#: ckanext/meerbusch/templates/snippets/package_item.html:44
 msgid "Deleted"
 msgstr ""
 
@@ -573,6 +579,18 @@ msgid ""
 "name (e.g. \"disease\") and a value (e.g. \"diabetics\") for each descriptive"
 " field. These fields will be available in the catalogue and are used for "
 "search purposes only."
+msgstr ""
+
+#: ckanext/meerbusch/templates/snippets/package_item.html:42
+msgid "Draft"
+msgstr ""
+
+#: ckanext/meerbusch/templates/snippets/package_item.html:52
+msgid "Popular"
+msgstr ""
+
+#: ckanext/meerbusch/templates/snippets/package_item.html:59
+msgid "This dataset has no description"
 msgstr ""
 
 #: ckanext/meerbusch/templates/user/dashboard.html:7
