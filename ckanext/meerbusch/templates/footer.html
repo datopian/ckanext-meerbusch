@@ -1,43 +1,50 @@
 <footer class="site-footer">
-  <div class="container">
-    {% block footer_content %}
-    <div class="row">
-      <div class="span4 footer-links">
-        {% block footer_nav %}
-        <ul class="unstyled">
-          {% block footer_links %}
-          <li><a href="http://www.meerbusch.de/C12573AD002ECE05/0/E07D742AAE902274C12573C5004C4361?OpenDocument">{{ _('Impressum') }}</a></li>
-          {% endblock %}
-        </ul>
-        <ul class="unstyled">
-          <li><a href="http://www.meerbusch.de/">{{ _('Stadt Meerbusch') }}</a></li>
-        </ul>
-        <ul class="unstyled">
-          {% block footer_links_ckan %}
+    <div class="container">
+        {% block footer_content %}
+        <div class="row">
+            <div class="span4 footer-links">
+                {% block footer_nav %}
+                <ul class="unstyled">
+                    {% block footer_links %}
+                    <li><a href="http://www.meerbusch.de/C12573AD002ECE05/0/E07D742AAE902274C12573C5004C4361?OpenDocument">{{ _('Impressum') }}</a></li>
+                    {% endblock %}
+                </ul>
+                <ul class="unstyled">
+                    <li><a href="http://www.meerbusch.de/">{{ _('Stadt Meerbusch') }}</a></li>
+                </ul>
+                <ul class="unstyled">
+                    {% block footer_links_ckan %}
 
-          {% endblock %}
-        </ul>
+                    {% endblock %}
+                </ul>
+                {% endblock %}
+            </div>
+            <div class="span4">
+                <ul class="unstyled">
+                    <li><a href="{{ _('https://www.viderum.com/') }}">{{ _('Created by Viderum') }}</a></li>
+                    {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
+                    <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
+                </ul>
+            </div>
+            <div class="span4 attribution">
+                <ul class="unstyled">
+                    <li>
+                        {% block footer_attribution %}
+                        {% trans %}Powered by <a href="http://ckan.org">CKAN</a>{% endtrans %}
+                        {% endblock %}
+                    </li>
+                    <li>
+                        <a href="http://opendefinition.org/buttons/">Open Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         {% endblock %}
-      </div>
-      <div class="span4">
-        <ul class="unstyled">
-	   <li><a href="{{ _('https://www.viderum.com/') }}">{{ _('Created by Viderum') }}</a></li>
-          {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
-          <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
-        </ul>
-      </div>
-      <div class="span4 attribution">
-        {% block footer_attribution %}
-        <p>{% trans %}Powered by <a href="http://ckan.org">CKAN</a>{% endtrans %}</p>
-        {% endblock %}
-      </div>
     </div>
-    {% endblock %}
-  </div>
 
-  {% block footer_debug %}
-  {% if g.debug %}
-  {% include 'snippets/debug.html' %}
-  {% endif %}
-  {% endblock %}
+    {% block footer_debug %}
+    {% if g.debug %}
+    {% include 'snippets/debug.html' %}
+    {% endif %}
+    {% endblock %}
 </footer>
