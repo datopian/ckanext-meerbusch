@@ -678,6 +678,10 @@ msgstr ""
 msgid "Update Profile"
 msgstr ""
 
+# Manually added
+msgid "Category"
+msgstr "Kategorie"
+
 #~ msgid "https://www.viderum.com/de/"
 #~ msgstr ""
 

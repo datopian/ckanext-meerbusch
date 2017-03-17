@@ -128,8 +128,8 @@
     },
     {
       "field_name": "category",
-      "label": "Kategorie",
-      "help_text": "Kategorie",
+      "label": "Category",
+      "help_text": "Category",
       "help_inline": true,
       "preset": "select",
       "choices": [
