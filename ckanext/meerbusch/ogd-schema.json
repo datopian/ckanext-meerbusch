@@ -84,49 +84,6 @@
       "preset": "dataset_organization"
     },
     {
-      "field_name": "version",
-      "label": "Version",
-      "validators": "ignore_missing unicode package_version_validator",
-      "form_placeholder": "1.0"
-    },
-    {
-      "field_name": "dates",
-      "label": "Dates",
-      "preset": "composite_repeating",
-      "help_text": "Kalender-Daten: Erstellungs-, Veröffentlichungs- und Aktualisierungsdaten von Daten, Dokumenten, Apps und ihren Metadaten. Wird in der Oberfläche so angezeigt, dass Datennutzer einen Eindruck davon bekommen, wie aktuell die Daten sind.",
-      "form_blanks": 3,
-      "required": true,
-      "include_empty": true,
-      "subfields": [
-        {
-            "field_name": "role",
-            "preset": "select",
-            "label": "Role",
-            "required": true,
-            "choices": [
-                {
-                  "value": "erstellt",
-                  "label": "Erstellt"
-                },
-                {
-                  "value": "veroeffentlicht",
-                  "label": "Veroeffentlicht"
-                },
-                {
-                  "value": "aktualisiert",
-                  "label": "Aktualisiert"
-                }
-            ]
-        },
-        {
-            "field_name": "date",
-            "label": "Date",
-            "preset": "date",
-            "required": true
-        }
-      ]
-    },
-    {
       "field_name": "category",
       "label": "Category",
       "help_text": "Category",
@@ -191,6 +148,49 @@
         }
       ],
            "validators": "not_empty"
+    },
+    {
+      "field_name": "version",
+      "label": "Version",
+      "validators": "ignore_missing unicode package_version_validator",
+      "form_placeholder": "1.0"
+    },
+    {
+      "field_name": "dates",
+      "label": "Dates",
+      "preset": "composite_repeating",
+      "help_text": "Kalender-Daten: Erstellungs-, Veröffentlichungs- und Aktualisierungsdaten von Daten, Dokumenten, Apps und ihren Metadaten. Wird in der Oberfläche so angezeigt, dass Datennutzer einen Eindruck davon bekommen, wie aktuell die Daten sind.",
+      "form_blanks": 3,
+      "required": true,
+      "include_empty": true,
+      "subfields": [
+        {
+            "field_name": "role",
+            "preset": "select",
+            "label": "Role",
+            "required": true,
+            "choices": [
+                {
+                  "value": "erstellt",
+                  "label": "Erstellt"
+                },
+                {
+                  "value": "veroeffentlicht",
+                  "label": "Veroeffentlicht"
+                },
+                {
+                  "value": "aktualisiert",
+                  "label": "Aktualisiert"
+                }
+            ]
+        },
+        {
+            "field_name": "date",
+            "label": "Date",
+            "preset": "date",
+            "required": true
+        }
+      ]
     }
   ],
   "resource_fields": [
