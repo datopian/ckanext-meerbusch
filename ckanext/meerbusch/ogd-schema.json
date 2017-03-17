@@ -125,6 +125,72 @@
             "required": true
         }
       ]
+    },
+    {
+      "field_name": "category",
+      "label": "Kategorie",
+      "help_text": "Kategorie",
+      "help_inline": true,
+      "preset": "select",
+      "choices": [
+        {
+         "value": "wirtschaft_arbeit",
+         "label": "Wirtschaft und Arbeit"
+        },
+        {
+         "value": "transport_verkehr",
+         "label": "Transport und Verkehr"
+        },
+        {
+         "value": "umwelt_klima",
+         "label": "Umwelt und Klima"
+        },
+        {
+         "value": "geo",
+         "label": "Geo"
+        },
+        {
+         "value": "gesundheit",
+         "label": "Gesundheit"
+        },
+        {
+         "value": "verbraucher",
+         "label": "Verbraucher"
+        },
+        {
+         "value": "infrastruktur_bauen_wohnen",
+         "label": "Infrastruktur, Bauen und Wohnen"
+        },
+        {
+         "value": "bildung_wissenschaft",
+         "label": "Bildung und Wissenschaft"
+        },
+        {
+         "value": "verwaltung",
+         "label": "Verwaltung"
+        },
+        {
+         "value": "gesetze_justiz",
+         "label": "Gesetze und Justiz"
+        },
+        {
+         "value": "bevoelkerung",
+         "label": "Bevölkerung"
+        },
+        {
+         "value": "politik_wahlen",
+         "label": "Politik und Wahlen"
+        },
+        {
+         "value": "soziales",
+         "label": "Soziales"
+        },
+        {
+         "value": "kultur_freizeit_sport_tourismus",
+         "label": "Kuluter, Freizeit, Sport und Tourismus"
+        }
+      ],
+           "validators": "not_empty"
     }
   ],
   "resource_fields": [
