@@ -160,15 +160,15 @@
       "label": "Dates",
       "preset": "composite_repeating",
       "help_text": "Kalender-Daten: Erstellungs-, Veröffentlichungs- und Aktualisierungsdaten von Daten, Dokumenten, Apps und ihren Metadaten. Wird in der Oberfläche so angezeigt, dass Datennutzer einen Eindruck davon bekommen, wie aktuell die Daten sind.",
-      "form_blanks": 3,
-      "required": true,
+      "form_blanks": 0,
+      "required": false,
       "include_empty": true,
       "subfields": [
         {
             "field_name": "role",
             "preset": "select",
             "label": "Role",
-            "required": true,
+            "required": false,
             "choices": [
                 {
                   "value": "erstellt",
@@ -188,7 +188,7 @@
             "field_name": "date",
             "label": "Date",
             "preset": "date",
-            "required": true
+            "required": false
         }
       ]
     }
