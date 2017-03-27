@@ -160,7 +160,7 @@
       "label": "Dates",
       "preset": "composite_repeating",
       "help_text": "Kalender-Daten: Erstellungs-, Veröffentlichungs- und Aktualisierungsdaten von Daten, Dokumenten, Apps und ihren Metadaten. Wird in der Oberfläche so angezeigt, dass Datennutzer einen Eindruck davon bekommen, wie aktuell die Daten sind.",
-      "form_blanks": 0,
+      "form_blanks": 3,
       "required": true,
       "include_empty": true,
       "subfields": [
