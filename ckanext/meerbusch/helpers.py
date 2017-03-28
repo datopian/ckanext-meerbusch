@@ -1,10 +1,8 @@
 import os
 import json
 import logging
-import collections
 
 import ckan.logic as l
-from ckan.plugins import toolkit
 
 log = logging.getLogger(__name__)
 
@@ -60,32 +58,3 @@ def get_package_version(id):
         pass
     
     return version
-
-def get_number_of_resources_for_type(list_, key, unique=False):
-    ''' Take a list of dicts and create a new one containing just the
-    values and the count for the key with unique values if requested. '''
-    new_list = []
-    formated_list =[]
-
-    for item in list_:
-        value = item.get(key)
-        if not value or (unique and value in new_list):
-            continue
-        new_list.append(value)
-
-    counter = collections.Counter(new_list)
-
-    for key, value in dict(counter).iteritems():
-        formated_list.append({'format': key, 'count': value})
-
-    return formated_list
-
-def get_package_resources(package_id):
-
-    package = toolkit.get_action('package_show')(data_dict={
-        'id': package_id,
-        'include_tracking': True
-    })
-    resources = package.get('resources', [])
-
-    return resources

@@ -74,9 +74,5 @@ class MeerbuschPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm,
             'get_language_by_code':
                 _helpers.get_language_by_code,
             'get_package_version':
-                _helpers.get_package_version,
-            'get_package_resources':
-                _helpers.get_package_resources,
-            'get_number_of_resources_for_type':
-                _helpers.get_number_of_resources_for_type
+                _helpers.get_package_version
         }
