@@ -13,12 +13,11 @@ Example:
   {% snippet 'snippets/package_item.html', package=c.datasets[0] %}
 
 #}
-{% set package = h.get_package_by_name(package.name) %}
 {% set truncate = truncate or 180 %}
 {% set truncate_title = truncate_title or 80 %}
 {% set title = package.title or package.name %}
 {% set notes = h.markdown_extract(package.notes, extract_length=truncate) %}
-
+{% set resources = h.get_package_resources(package.name) %}
 
 {% block package_item %}
   <li class="{{ item_class or "dataset-item" }}">
@@ -61,11 +60,11 @@ Example:
         {% endblock %}
       </div>
       {% block resources %}
-        {% if package.resources and not hide_resources %}
+        {% if resources and not hide_resources %}
           {% block resources_outer %}
             <ul class="dataset-resources unstyled">
               {% block resources_inner %}
-                {% for resource in h.get_number_of_resources_for_type(package.resources, 'format', unique=False) %}
+                {% for resource in h.get_number_of_resources_for_type(resources, 'format', unique=False) %}
                 <li>
                   <span>{{ resource.count }}x</span>
                   <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="label" data-format="{{ resource.format.lower() }}">{{ resource.format }}</a>
