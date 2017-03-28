@@ -80,10 +80,10 @@ def get_number_of_resources_for_type(list_, key, unique=False):
 
     return formated_list
 
-def get_package_resources(package_name):
+def get_package_resources(package_id):
 
     package = toolkit.get_action('package_show')(data_dict={
-        'id': package_name,
+        'id': package_id,
         'include_tracking': True
     })
     resources = package.get('resources', [])
