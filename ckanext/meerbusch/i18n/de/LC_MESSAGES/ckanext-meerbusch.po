@@ -682,6 +682,12 @@ msgstr ""
 msgid "Category"
 msgstr "Kategorie"
 
+msgid "Temporal coverage from"
+msgstr "Zeitrahmen von"
+
+msgid "Temporal coverage to"
+msgstr "Zeitrahmen bis"
+
 #~ msgid "https://www.viderum.com/de/"
 #~ msgstr ""
 
