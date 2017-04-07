@@ -91,48 +91,36 @@
       "preset": "select",
       "choices": [
         {
-         "value": "wirtschaft_arbeit",
-         "label": "Wirtschaft und Arbeit"
-        },
-        {
-         "value": "transport_verkehr",
-         "label": "Transport und Verkehr"
-        },
-        {
-         "value": "umwelt_klima",
-         "label": "Umwelt und Klima"
-        },
-        {
-         "value": "geo",
-         "label": "Geo"
-        },
-        {
-         "value": "gesundheit",
-         "label": "Gesundheit"
-        },
-        {
-         "value": "verbraucher",
-         "label": "Verbraucher"
-        },
-        {
-         "value": "infrastruktur_bauen_wohnen",
-         "label": "Infrastruktur, Bauen und Wohnen"
+         "value": "bevoelkerung",
+         "label": "Bevölkerung"
         },
         {
          "value": "bildung_wissenschaft",
          "label": "Bildung und Wissenschaft"
         },
         {
-         "value": "verwaltung",
-         "label": "Verwaltung"
+         "value": "geo",
+         "label": "Geographie, Geologie und Geobasisdaten"
         },
         {
          "value": "gesetze_justiz",
          "label": "Gesetze und Justiz"
         },
         {
-         "value": "bevoelkerung",
-         "label": "Bevölkerung"
+         "value": "gesundheit",
+         "label": "Gesundheit"
+        },
+        {
+         "value": "infrastruktur_bauen_wohnen",
+         "label": "Infrastruktur, Bauen und Wohnen"
+        },
+        {
+         "value": "kultur_freizeit_sport_tourismus",
+         "label": "Kultur, Freizeit, Sport und Tourismus"
+        }
+        {
+         "value": "verwaltung",
+         "label": "Offentliche Verwaltung, Haushalt und Steuern"
         },
         {
          "value": "politik_wahlen",
@@ -143,9 +131,21 @@
          "label": "Soziales"
         },
         {
-         "value": "kultur_freizeit_sport_tourismus",
-         "label": "Kuluter, Freizeit, Sport und Tourismus"
-        }
+         "value": "transport_verkehr",
+         "label": "Transport und Verkehr"
+        },
+        {
+         "value": "umwelt_klima",
+         "label": "Umwelt und Klima"
+        },
+        {
+         "value": "verbraucher",
+         "label": "Verbraucherschutz"
+        },
+        {
+         "value": "wirtschaft_arbeit",
+         "label": "Wirtschaft und Arbeit"
+        },
       ],
            "validators": "not_empty"
     },
