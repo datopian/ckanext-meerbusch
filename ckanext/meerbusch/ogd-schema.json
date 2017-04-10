@@ -145,7 +145,7 @@
         {
          "value": "wirtschaft_arbeit",
          "label": "Wirtschaft und Arbeit"
-        },
+        }
       ],
            "validators": "not_empty"
     },
