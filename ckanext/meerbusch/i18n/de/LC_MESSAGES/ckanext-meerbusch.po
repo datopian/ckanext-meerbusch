@@ -688,6 +688,12 @@ msgstr "Zeitrahmen von"
 msgid "Temporal coverage to"
 msgstr "Zeitrahmen bis"
 
+msgid "Filter by location"
+msgstr "Nach Ort filtern"
+
+msgid "Clear"
+msgstr "aus"
+
 #~ msgid "https://www.viderum.com/de/"
 #~ msgstr ""
 
