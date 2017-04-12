@@ -15,7 +15,7 @@ Example:
 
 #}
 {% block package_list %}
-  {% if packages %}
+  {% if packages or c.datasets %}
     <ul class="{{ list_class or 'dataset-list unstyled' }}">
       {% block package_list_inner %}
         {% if not c.datasets %}
