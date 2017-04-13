@@ -682,6 +682,9 @@ msgstr ""
 msgid "Category"
 msgstr "Kategorie"
 
+msgid "Temporal coverage"
+msgstr "Zeitrahmen"
+
 msgid "Temporal coverage from"
 msgstr "Zeitrahmen von"
 

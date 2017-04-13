@@ -193,18 +193,26 @@
       ]
     },
     {
-      "field_name":"temporal_coverage_from",
-      "label": "Temporal coverage from",
-      "help_text": "Start-Datum: Der Zeitpunkt, von dem an der Datensatz, das Dokument oder die App einschließlich Daten enthält. Wird insb. zum Filtern verwendet.",
-      "preset":"date",
-      "required":false
-    },
-    {
-      "field_name":"temporal_coverage_to",
-      "label": "Temporal coverage to",
-      "help_text": "End-Datum: Der Zeitpunkt, bis zu dem der Datensatz, das Dokument oder die App einschließlich Daten enthält. Wird insb. zum Filtern verwendet.",
-      "preset":"date",
-      "required":false
+      "field_name":"temporal_coverage",
+      "label":"Temporal coverage", 
+      "preset":"composite",
+      "required":false,
+      "subfields": [
+        {
+          "field_name":"temporal_coverage_from",
+          "label": "Temporal coverage from",
+          "help_text": "Start-Datum: Der Zeitpunkt, von dem an der Datensatz, das Dokument oder die App einschließlich Daten enthält. Wird insb. zum Filtern verwendet.",
+          "preset":"date",
+          "required":false
+        },
+        {
+          "field_name":"temporal_coverage_to",
+          "label": "Temporal coverage to",
+          "help_text": "End-Datum: Der Zeitpunkt, bis zu dem der Datensatz, das Dokument oder die App einschließlich Daten enthält. Wird insb. zum Filtern verwendet.",
+          "preset":"date",
+          "required":false
+        }
+      ] 
     }
   ],
   "resource_fields": [
