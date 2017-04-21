@@ -15,16 +15,20 @@ Example:
 
 #}
 {% block package_list %}
-  {% if packages or c.datasets %}
+  {% if group_packages or packages or c.datasets %}
     <ul class="{{ list_class or 'dataset-list unstyled' }}">
       {% block package_list_inner %}
-        {% if not c.datasets %}
+        {% if group_packages %}
+          {% for package in group_packages %}
+            {% snippet 'snippets/package_item.html', package=package, item_class=item_class, hide_resources=hide_resources, banner=banner, truncate=truncate, truncate_title=truncate_title %}
+          {% endfor %}
+        {% elif not c.datasets %}
           {% for package in packages %}
             {% snippet 'snippets/package_item.html', package=package, item_class=item_class, hide_resources=hide_resources, banner=banner, truncate=truncate, truncate_title=truncate_title %}
           {% endfor %}
         {% else %}
           {% for package in c.datasets %}
-            {% snippet 'snippets/package_item.html', package=package, item_class=item_class, hide_resources=hide_resources, banner=banner, truncate=truncate, truncate_title=truncate_title %}
+            {% snippet 'snippets/package_item.html', package=package, item_class=item_class, hide_resources=True, banner=banner, truncate=truncate, truncate_title=truncate_title %}
           {% endfor %}
         {% endif %}
       {% endblock %}
