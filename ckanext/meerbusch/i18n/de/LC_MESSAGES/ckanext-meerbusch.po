@@ -697,6 +697,9 @@ msgstr "Nach Ort filtern"
 msgid "Clear"
 msgstr "aus"
 
+msgid "Dates"
+msgstr "Daten"
+
 #~ msgid "https://www.viderum.com/de/"
 #~ msgstr ""
 
