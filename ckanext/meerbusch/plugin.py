@@ -84,7 +84,5 @@ class MeerbuschPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm,
             'package_create':
                 create.package_create, 
             'package_update':
-                update.package_update, 
-            'package_show':
-                get.package_show
+                update.package_update
         }
