@@ -40,7 +40,7 @@ def package_update(context, data_dict):
         except ValueError:
             for date_role in dates:
                 date_role['date'] = date_role['date']
-        data_dict['dates'] = dates
+        data_dict['dates'] = json.dumps(dates)
     except KeyError:
         try:
             data_dict['dates-1-date'] = datetime.strptime(data_dict['dates-1-date'], '%d.%m.%Y').strftime('%Y-%m-%d')
@@ -52,12 +52,15 @@ def package_update(context, data_dict):
             data_dict['dates-3-date'] = data_dict['dates-3-date']
 
  
-    print 'after data_dict'
+    print '-------------------AFTERWARDS--------------------'
+    print 'data_dict'
     print '-------------------------------------------------'
     print data_dict
     print type(data_dict)
     print '-------------------------------------------------'
-
+    print 'package_dict'
+    print package_dict
+    print '-------------------------------------------------'
     
     dataset = l.action.update.package_update(context, data_dict)
     
