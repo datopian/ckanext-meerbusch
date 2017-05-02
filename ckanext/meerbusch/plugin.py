@@ -1,7 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckanext.meerbusch.helpers as _helpers
-from ckanext.meerbusch.logic import create, update, get
+from ckanext.meerbusch.logic import create, update
 from ckan.lib.plugins import DefaultTranslation
 
 
