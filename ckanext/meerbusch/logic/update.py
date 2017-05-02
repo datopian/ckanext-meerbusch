@@ -46,7 +46,7 @@ def package_update(context, data_dict):
         data_dict['temporal_coverage-temporal_coverage_from'] = temporal_from
         data_dict['temporal_coverage-temporal_coverage_to'] = temporal_to
      
-    data_dict['dates'] = dates
+
 
     print 'after data_dict'
     print '-------------------------------------------------'
