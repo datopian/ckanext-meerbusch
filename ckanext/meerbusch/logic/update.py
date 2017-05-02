@@ -1,4 +1,3 @@
-import logging
 import json
 from datetime import datetime
 
@@ -6,11 +5,6 @@ import ckan.logic as l
 
 def package_update(context, data_dict):
     package_dict = l.get_action('package_show')({}, {'id': data_dict['id']})
-    print "package_dict"
-    print package_dict
-    print "data_dict"
-    print data_dict
-
     
     try:
         temporal_coverage = json.loads(data_dict['temporal_coverage'])
@@ -51,16 +45,6 @@ def package_update(context, data_dict):
             data_dict['dates-2-date'] = data_dict['dates-2-date']
             data_dict['dates-3-date'] = data_dict['dates-3-date']
 
- 
-    print '-------------------AFTERWARDS--------------------'
-    print 'data_dict'
-    print '-------------------------------------------------'
-    print data_dict
-    print type(data_dict)
-    print '-------------------------------------------------'
-    print 'package_dict'
-    print package_dict
-    print '-------------------------------------------------'
     
     dataset = l.action.update.package_update(context, data_dict)
     

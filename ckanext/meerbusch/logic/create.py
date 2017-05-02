@@ -1,12 +1,9 @@
-import logging
 from datetime import datetime
 
 import ckan.logic as l
 
 
 def package_create(context, data_dict):
-
-
     temporal_from = data_dict['temporal_coverage-temporal_coverage_from']
     temporal_to = data_dict['temporal_coverage-temporal_coverage_to']
     role_date_1 = data_dict['dates-1-date']
