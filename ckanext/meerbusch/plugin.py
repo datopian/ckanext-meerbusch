@@ -1,6 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckanext.meerbusch.helpers as _helpers
+from ckanext.meerbusch.logic import create, update, get
 from ckan.lib.plugins import DefaultTranslation
 
 
@@ -12,6 +13,7 @@ class MeerbuschPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm,
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IRoutes)
     plugins.implements(plugins.ITranslation)
+    plugins.implements(plugins.IActions, inherit=True)
     
     # IPackageController
     
@@ -75,4 +77,14 @@ class MeerbuschPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm,
                 _helpers.get_language_by_code,
             'get_package_version':
                 _helpers.get_package_version
+        }
+
+    def get_actions(self):
+        return {
+            'package_create':
+                create.package_create, 
+            'package_update':
+                update.package_update, 
+            'package_show':
+                get.package_show
         }
