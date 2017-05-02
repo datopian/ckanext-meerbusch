@@ -2,8 +2,10 @@ import json
 from datetime import datetime
 
 import ckan.logic as l
+from ckanext.meerbusch.helpers import get_date_format
 
 def package_update(context, data_dict):
+    date_format = get_date_format()
     package_dict = l.get_action('package_show')({}, {'id': data_dict['id']})
     
     try:
@@ -11,8 +13,8 @@ def package_update(context, data_dict):
         temporal_from = temporal_coverage['temporal_coverage_from']
         temporal_to = temporal_coverage['temporal_coverage_to']
         try:
-            temporal_coverage['temporal_coverage_from'] = datetime.strptime(temporal_from, '%d.%m.%Y').strftime('%Y-%m-%d')
-            temporal_coverage['temporal_coverage_to'] = datetime.strptime(temporal_to, '%d.%m.%Y').strftime('%Y-%m-%d')
+            temporal_coverage['temporal_coverage_from'] = datetime.strptime(temporal_from, date_format).strftime('%Y-%m-%d')
+            temporal_coverage['temporal_coverage_to'] = datetime.strptime(temporal_to, date_format).strftime('%Y-%m-%d')
         except ValueError:
             temporal_coverage['temporal_coverage_from'] = temporal_from
             temporal_coverage['temporal_coverage_to'] = temporal_to
@@ -20,8 +22,8 @@ def package_update(context, data_dict):
         temporal_from = data_dict['temporal_coverage-temporal_coverage_from']
         temporal_to = data_dict['temporal_coverage-temporal_coverage_to']
         try:
-            data_dict['temporal_coverage-temporal_coverage_from'] = datetime.strptime(temporal_from, '%d.%m.%Y').strftime('%Y-%m-%d')
-            data_dict['temporal_coverage-temporal_coverage_to'] = datetime.strptime(temporal_to, '%d.%m.%Y').strftime('%Y-%m-%d')
+            data_dict['temporal_coverage-temporal_coverage_from'] = datetime.strptime(temporal_from, date_format).strftime('%Y-%m-%d')
+            data_dict['temporal_coverage-temporal_coverage_to'] = datetime.strptime(temporal_to, date_format).strftime('%Y-%m-%d')
         except ValueError:
             data_dict['temporal_coverage-temporal_coverage_from'] = temporal_from
             data_dict['temporal_coverage-temporal_coverage_to'] = temporal_to
@@ -30,16 +32,16 @@ def package_update(context, data_dict):
         dates = json.loads(data_dict['dates'])
         try:
             for date_role in dates:
-                date_role['date'] = datetime.strptime(date_role['date'], '%d.%m.%Y').strftime('%Y-%m-%d')
+                date_role['date'] = datetime.strptime(date_role['date'], date_format).strftime('%Y-%m-%d')
         except ValueError:
             for date_role in dates:
                 date_role['date'] = date_role['date']
         data_dict['dates'] = json.dumps(dates)
     except KeyError:
         try:
-            data_dict['dates-1-date'] = datetime.strptime(data_dict['dates-1-date'], '%d.%m.%Y').strftime('%Y-%m-%d')
-            data_dict['dates-2-date'] = datetime.strptime(data_dict['dates-2-date'], '%d.%m.%Y').strftime('%Y-%m-%d')
-            data_dict['dates-3-date'] = datetime.strptime(data_dict['dates-3-date'], '%d.%m.%Y').strftime('%Y-%m-%d')
+            data_dict['dates-1-date'] = datetime.strptime(data_dict['dates-1-date'], date_format).strftime('%Y-%m-%d')
+            data_dict['dates-2-date'] = datetime.strptime(data_dict['dates-2-date'], date_format).strftime('%Y-%m-%d')
+            data_dict['dates-3-date'] = datetime.strptime(data_dict['dates-3-date'], date_format).strftime('%Y-%m-%d')
         except ValueError:
             data_dict['dates-1-date'] = data_dict['dates-1-date']
             data_dict['dates-2-date'] = data_dict['dates-2-date']
