@@ -3,6 +3,7 @@ import json
 import logging
 
 import ckan.logic as l
+import ckan.lib.helpers as h
 
 log = logging.getLogger(__name__)
 
@@ -58,3 +59,12 @@ def get_package_version(id):
         pass
     
     return version
+
+def get_date_format():
+    if h.lang() == 'de':
+        df = '%d.%m.%Y'
+    else:
+        df = '%d/%m/%Y'
+
+    print df
+    return df
